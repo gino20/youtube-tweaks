@@ -9,9 +9,7 @@ export default defineConfig({
       userscript: {
         icon: 'https://vitejs.dev/logo.svg',
         namespace: 'npm/vite-plugin-monkey',
-        match: ['*://www.youtube.com/*', '*://m.youtube.com/*'],
-        grant: 'none',
-        'run-at': 'document-start',
+        match: ['https://www.google.com/', 'https://www.youtube.com/'],
       },
     }),
   ],
