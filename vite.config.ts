@@ -7,9 +7,16 @@ export default defineConfig({
     monkey({
       entry: 'src/main.ts',
       userscript: {
-        icon: 'https://vitejs.dev/logo.svg',
-        namespace: 'npm/vite-plugin-monkey',
-        match: ['https://www.google.com/', 'https://www.youtube.com/'],
+        name: 'YouTube Always Show Controls',
+        namespace: 'https://github.com/local/youtube-tweaks',
+        description: 'Keeps YouTube video controls visible on watch pages, embeds, theater mode, miniplayer, and fullscreen.',
+        match: [
+          '*://www.youtube.com/*',
+          '*://m.youtube.com/*',
+          '*://www.youtube-nocookie.com/embed/*',
+        ],
+        'run-at': 'document-start',
+        grant: 'none',
       },
     }),
   ],
