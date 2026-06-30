@@ -10,6 +10,7 @@ const CONTROL_STYLE = `
   .html5-video-player.${MARKER_CLASS} .ytp-progress-list,
   .html5-video-player.${MARKER_CLASS} .ytp-gradient-bottom {
     opacity: 0.5 !important;
+    transition: opacity 200ms ease-in-out !important;
   }
 
   .html5-video-player.${MARKER_CLASS}:hover .ytp-chrome-bottom,
