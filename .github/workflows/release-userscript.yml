@@ -28,6 +28,13 @@ jobs:
       - name: Build userscript
         run: npm run build
 
+      - name: Deploy to Userscript Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: userscript
+
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
