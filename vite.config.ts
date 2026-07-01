@@ -37,8 +37,9 @@ export default defineConfig(({ mode }) => {
         userscript: {
           name: "YouTube Tweaks",
           namespace: "https://github.com/gino20/youtube-tweaks",
-          description:
-            "Keeps YouTube video controls visible on watch pages, embeds, theater mode, miniplayer, and fullscreen.",
+          description: "Keeps YouTube video controls visible",
+          supportURL: "https://github.com/gino20/youtube-tweaks/issues",
+          homepageURL: "https://github.com/gino20/youtube-tweaks",
           match: [
             "*://www.youtube.com/*",
             "*://m.youtube.com/*",
