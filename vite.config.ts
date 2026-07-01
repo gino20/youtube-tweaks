@@ -46,6 +46,7 @@ export default defineConfig(({ mode }) => {
             "*://www.youtube-nocookie.com/embed/*",
           ],
           "run-at": "document-start",
+          license: "MIT",
           grant: "none",
         },
       }),
