@@ -15,4 +15,4 @@ Add a scoped CSS override for every direct caption window child under `.ytp-capt
 
 ## Validation
 
-Run the TypeScript/Vite build, then verify in a rendered YouTube player that captions retain the same bottom offset before and after hovering on and off the player. The final behavior was also confirmed manually after targeting the moving child caption windows.
+Run the TypeScript/Vite build, then verify in a rendered YouTube player that captions retain the same bottom offset before and after hovering on and off the player, and after pausing and resuming playback. The final behavior was confirmed manually after targeting the moving child caption windows and neutralizing playback-state positioning transitions.
