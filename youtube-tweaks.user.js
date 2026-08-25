@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         YouTube Tweaks
 // @namespace    https://github.com/gino20/youtube-tweaks
-// @version      0.0.1
+// @version      0.0.2
 // @description  Keeps YouTube video controls visible
+// @license      MIT
 // @homepageURL  https://github.com/gino20/youtube-tweaks
 // @supportURL   https://github.com/gino20/youtube-tweaks/issues
 // @match        *://www.youtube.com/*
@@ -43,6 +44,14 @@
 
   .html5-video-player.${MARKER_CLASS}.ytp-autohide {
     cursor: default !important;
+  }
+
+  .html5-video-player.${MARKER_CLASS}
+    .ytp-caption-window-container > .caption-window.ytp-caption-window-bottom,
+  .html5-video-player.${MARKER_CLASS}
+    .ytp-caption-window-container > .caption-window.ytp-caption-window-rollup {
+    bottom: 64px !important;
+    margin-bottom: 0 !important;
   }
 `;
 	function injectStyle() {
