@@ -6,7 +6,7 @@ Keep YouTube captions at one vertical position while the userscript keeps the co
 
 ## Approach
 
-Add a scoped CSS override for the bottom and roll-up caption window children under `.ytp-caption-window-container`. These are the elements YouTube moves when hover changes the control-bar state. The caption windows will use a fixed bottom offset of `64px`, matching the visible control-bar footprint, and a zero bottom margin. YouTube will continue to control caption content, alignment, and wrapping; only the vertical offset is overridden.
+Add a scoped CSS override for every direct caption window child under `.ytp-caption-window-container`. These are the elements YouTube moves when hover or playback state changes the control-bar state. The caption windows will use a fixed bottom offset of `64px`, matching the visible control-bar footprint, with top positioning, transforms, transitions, and bottom margin neutralized. YouTube will continue to control caption content, alignment, and wrapping; only the vertical offset is overridden.
 
 ## Alternatives considered
 

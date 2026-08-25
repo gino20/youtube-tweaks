@@ -33,11 +33,12 @@ const CONTROL_STYLE = `
   }
 
   .html5-video-player.${MARKER_CLASS}
-    .ytp-caption-window-container > .caption-window.ytp-caption-window-bottom,
-  .html5-video-player.${MARKER_CLASS}
-    .ytp-caption-window-container > .caption-window.ytp-caption-window-rollup {
+    .ytp-caption-window-container > .caption-window {
+    top: auto !important;
     bottom: ${CAPTION_BOTTOM_OFFSET} !important;
     margin-bottom: 0 !important;
+    transform: none !important;
+    transition: none !important;
   }
 `;
 
