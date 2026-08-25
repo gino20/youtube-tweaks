@@ -2,6 +2,7 @@ const PLAYER_SELECTOR = ".html5-video-player";
 const MARKER_CLASS = "ytp-always-show-controls";
 const STYLE_ID = "youtube-tweaks";
 const LOG_PREFIX = "[YouTube Tweaks]";
+const CAPTION_BOTTOM_OFFSET = "64px";
 
 const CONTROL_STYLE = `
   .html5-video-player.${MARKER_CLASS} .ytp-chrome-bottom,
@@ -29,6 +30,14 @@ const CONTROL_STYLE = `
 
   .html5-video-player.${MARKER_CLASS}.ytp-autohide {
     cursor: default !important;
+  }
+
+  .html5-video-player.${MARKER_CLASS}
+    .ytp-caption-window-container > .caption-window.ytp-caption-window-bottom,
+  .html5-video-player.${MARKER_CLASS}
+    .ytp-caption-window-container > .caption-window.ytp-caption-window-rollup {
+    bottom: ${CAPTION_BOTTOM_OFFSET} !important;
+    margin-bottom: 0 !important;
   }
 `;
 
